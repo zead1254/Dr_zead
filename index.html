@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zead Elsayed | The Boss — Dentist Student | Links & Portfolio</title>
+  <meta name="description" content="الصفحة الرسمية لزيد السيد (The Boss) — طالب أسنان بجامعة سيناء/العريش ومصمم مواقع. روابط التواصل وأعمال سنوات الدراسة (1–5)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#06070d;
+      --bg2:#0b0f1a;
+      --card:#0f1423aa; /* glass */
+      --text:#eef3ff;
+      --muted:#aab4d6;
+      --brand:#39e6c4;   /* فيروزي نيون */
+      --brand2:#ffd166;  /* ذهبي لطيف */
+      --danger:#ff477e;
+      --ok:#72f1b8;
+      --shadow: 0 10px 40px rgba(0,0,0,.35), 0 0 30px rgba(57,230,196,.08);
+      --radius: 24px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background: radial-gradient(1200px 600px at 90% -10%, #12203a 0%, rgba(18,32,58,0) 60%),
+                               radial-gradient(900px 600px at -10% 10%, #0e1630 0%, rgba(14,22,48,0) 60%),
+                               linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+      color:var(--text); font-family: 'Cairo','Tajawal', system-ui, sans-serif;
+      overflow-x:hidden;
+    }
+    a{color:inherit; text-decoration:none}
+
+    /* ====== Header ====== */
+    header{
+      position:sticky; top:0; z-index:50;
+      background:linear-gradient(180deg, rgba(6,7,13,.9), rgba(6,7,13,.6));
+      backdrop-filter: blur(8px);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .container{width:min(1200px, 92vw); margin-inline:auto}
+    .nav{display:flex; align-items:center; gap:16px; padding:10px 0}
+    .logo{
+      width:52px; height:52px; border-radius:14px; overflow:hidden; flex:0 0 auto; border:1px solid rgba(255,255,255,.08);
+      box-shadow: 0 8px 24px rgba(0,0,0,.4);
+      background:#0b1020;
+    }
+    .brand-txt{display:flex; flex-direction:column; line-height:1.1}
+    .brand-txt b{font-weight:800; letter-spacing:.2px}
+    .brand-txt small{color:var(--muted)}
+
+    /* ====== Hero ====== */
+    .hero{position:relative; padding: clamp(32px, 6vw, 64px) 0 40px;}
+    .hero-grid{display:grid; grid-template-columns: 1.1fr .9fr; gap: clamp(18px,3vw,28px); align-items:center}
+    @media (max-width: 900px){.hero-grid{grid-template-columns:1fr;}}
+    .title{font-size:clamp(28px, 3.2vw, 44px); font-weight:800; letter-spacing:.2px;}
+    .subtitle{color:var(--muted); font-size:clamp(16px,2vw,18px)}
+
+    .tag{display:inline-flex; align-items:center; gap:8px; padding:.5rem .8rem; border-radius:999px;
+      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.08); box-shadow: var(--shadow);
+      margin: 6px 6px 0 0; font-weight:700; font-size:.95rem
+    }
+    .tag i{display:inline-block; width:10px; height:10px; border-radius:999px; background:var(--brand); box-shadow:0 0 16px var(--brand);}
+
+    .hero-card{
+      position:relative; isolation:isolate; padding:20px; border-radius: calc(var(--radius) + 6px);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.08); box-shadow: var(--shadow);
+      overflow:hidden; min-height: 420px; display:grid; place-items:center
+    }
+
+    /* Animated organic blob background (SVG filter gooey) */
+    .blob-wrap{position:absolute; inset:0; z-index:0; filter:url(#gooey); opacity:.9}
+    .blob{position:absolute; width:240px; height:240px; border-radius:50%;
+      background: radial-gradient(circle at 30% 30%, var(--brand) 0%, rgba(57,230,196,.2) 50%, rgba(57,230,196,0) 70%);
+      animation: floatXY 12s ease-in-out infinite;
+      mix-blend-mode: screen; opacity:.6;
+    }
+    .blob.b2{background: radial-gradient(circle at 30% 30%, var(--brand2) 0%, rgba(255,209,102,.2) 50%, rgba(255,209,102,0) 70%);
+      animation-duration: 15s; animation-delay:-3s
+    }
+    .blob.b3{background: radial-gradient(circle at 30% 30%, #8ab6ff 0%, rgba(138,182,255,.2) 50%, rgba(138,182,255,0) 70%);
+      animation-duration: 18s; animation-delay:-6s
+    }
+    @keyframes floatXY{
+      0%{transform: translate(0,0) scale(1)}
+      33%{transform: translate(-80px,30px) scale(1.12)}
+      66%{transform: translate(60px,-50px) scale(.92)}
+      100%{transform: translate(0,0) scale(1)}
+    }
+
+    .portrait{position:relative; z-index:2; max-width:min(90%, 420px);
+      filter: drop-shadow(0 12px 40px rgba(0,0,0,.55)) drop-shadow(0 0 24px rgba(57,230,196,.25));
+      animation: popIn 900ms cubic-bezier(.2,.7,.2,1) 100ms both;
+    }
+    @keyframes popIn{from{transform:translateY(18px) scale(.98); opacity:0} to{transform:none; opacity:1}}
+
+    /* Orbiting sparkles around the portrait */
+    .sparkle{position:absolute; inset:0; z-index:1; pointer-events:none}
+    .sparkle span{position:absolute; width:10px; height:10px; border-radius:50%; background: white; opacity:.9;
+      box-shadow:0 0 12px var(--brand), 0 0 30px var(--brand);
+      animation: orbit 10s linear infinite;
+    }
+    .sparkle span:nth-child(2){width:8px; height:8px; animation-duration: 13s}
+    .sparkle span:nth-child(3){width:6px; height:6px; animation-duration: 16s}
+    @keyframes orbit{from{transform: rotate(0deg) translateX(190px) rotate(0deg)} to{transform: rotate(360deg) translateX(190px) rotate(-360deg)}}
+
+    /* ====== Link Cards ====== */
+    .links{display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap:16px; margin-top:18px}
+    .card{background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.08); border-radius: var(--radius); padding:16px; box-shadow:var(--shadow);
+      display:flex; align-items:center; gap:12px; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .card:hover{transform: translateY(-4px); border-color: rgba(57,230,196,.45); box-shadow:0 12px 50px rgba(57,230,196,.18)}
+    .ico{width:40px; height:40px; display:grid; place-items:center; border-radius:14px; background:rgba(57,230,196,.12); border:1px solid rgba(57,230,196,.4)}
+    .card b{font-weight:800}
+    .card small{color:var(--muted)}
+
+    /* ====== Years Gallery ====== */
+    section{padding: clamp(28px, 5vw, 48px) 0}
+    h2{font-size: clamp(22px, 2.4vw, 30px); margin:0 0 14px; letter-spacing:.3px}
+    .years{display:grid; grid-template-columns: repeat(5,1fr); gap:10px}
+    @media (max-width:1000px){.years{grid-template-columns: repeat(3,1fr)}}
+    @media (max-width:700px){.years{grid-template-columns: repeat(2,1fr)}}
+
+    .year-tile{position:relative; overflow:hidden; border-radius:20px; background:
+      linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.08); cursor:pointer; min-height:120px; display:grid; place-items:center;
+      transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+    }
+    .year-tile:hover{transform: translateY(-4px); border-color: rgba(255,209,102,.5); box-shadow:0 14px 40px rgba(255,209,102,.15)}
+    .year-tile b{font-size:26px}
+
+    .gallery{display:grid; grid-template-columns: repeat(auto-fill, minmax(180px,1fr)); gap:12px; margin-top:14px}
+    .ph{position:relative; overflow:hidden; border-radius:16px; height: 170px; background:#0b1020; border:1px solid rgba(255,255,255,.08)}
+    .ph img{width:100%; height:100%; object-fit:cover; display:block; filter: saturate(1.05)}
+    .ph::after{content:"اضغط للعرض"; position:absolute; inset:auto 8px 8px 8px; padding:.35rem .6rem; border-radius:10px; font-size:.9rem;
+      background: rgba(0,0,0,.45); border:1px solid rgba(255,255,255,.12); color:#fff; opacity:0; transform: translateY(8px);
+      transition: .2s ease}
+    .ph:hover::after{opacity:1; transform:none}
+
+    /* Lightbox */
+    .lightbox{position:fixed; inset:0; background: rgba(0,0,0,.75); display:none; align-items:center; justify-content:center; padding:20px; z-index:60}
+    .lightbox.open{display:flex}
+    .lightbox img{max-width:min(92vw, 1100px); max-height:84vh; border-radius:18px; box-shadow:0 20px 80px rgba(0,0,0,.6)}
+
+    /* Reveal on scroll */
+    .reveal{opacity:0; transform: translateY(14px); transition: .6s ease}
+    .reveal.show{opacity:1; transform:none}
+
+    /* ====== Animated starfield (canvas) ====== */
+    #stars{position:fixed; inset:0; z-index:-1; opacity:.5}
+
+    /* footer */
+    footer{padding: 36px 0; color:var(--muted); border-top:1px solid rgba(255,255,255,.06); margin-top:30px}
+    .muted{color:var(--muted)}
+
+    /* Small helper labels */
+    .pill{display:inline-block; font-size:.8rem; padding:.2rem .6rem; border-radius:999px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.06)}
+  </style>
+</head>
+<body>
+  <!-- background stars canvas -->
+  <canvas id="stars"></canvas>
+
+  <header>
+    <div class="container nav">
+      <img id="siteLogo" class="logo" src="logo.jpg" alt="Logo" title="logo.jpg" />
+      <div class="brand-txt">
+        <b>Zead Elsayed <span class="muted"></span> <span style="color:var(--brand2)"></span></b>
+        <small> </small>
+      </div>
+      <div style="margin-inline-start:auto" class="pill"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- ====== HERO ====== -->
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <h1 class="title">مرحباً، أنا <span style="color:var(--brand2)">Zead Elsayed</span> <span class="muted">(</span><span style="color:var(--brand)">The Boss</span><span class="muted">)</span></h1>
+          <p class="subtitle">طالب طب أسنان بجامعة سيناء – العريش، .
+          </p>
+          <div style="margin-top:10px">
+            <span class="tag"><i></i> Dentistry Student</span>
+            <span class="tag"><i></i> Web Designer</span>
+            <span class="tag"><i></i> Content Maker</span>
+          </div>
+
+          <div class="links">
+            <a class="card" href="https://wa.me/message/TQP2VP6NCWNIJ1?src=qr" target="_blank" rel="noopener">
+              <div class="ico" aria-hidden>
+                <!-- WhatsApp icon -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.5 3.5A10 10 0 0 0 3.7 17.6L3 21l3.5-.7A10 10 0 1 0 20.5 3.5Z" stroke="currentColor" stroke-width="1.3"/><path d="M8.5 8.5c0 4 3.5 7 6.5 7 .6 0 1.6-.4 2-.9l.5-.6c.2-.2.2-.5 0-.7l-1.5-1.4c-.2-.2-.5-.2-.7 0l-.8.8c-.2.2-.5.2-.7 0L11.8 11c-.2-.2-.2-.5 0-.7l.8-.8c.2-.2.2-.5 0-.7L12 7.3c-.2-.2-.5-.2-.7 0l-.6.5c-.6.4-1.2 1.4-1.2 1.7Z" fill="currentColor"/></svg>
+              </div>
+              <div><b>WhatsApp</b><br><small>تواصل مباشر</small></div>
+            </a>
+            <a class="card" href="https://www.facebook.com/zeadelsayed9?mibextid=ZbWKwL" target="_blank" rel="noopener">
+              <div class="ico" aria-hidden>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 20v-7h2.3l.4-3H13V8.4c0-.9.2-1.4 1.5-1.4H16V4.3C15.8 4.2 15 4 14 4c-2.2 0-3.6 1.3-3.6 3.7V10H8v3h2.4v7H13Z" fill="currentColor"/></svg>
+              </div>
+              <div><b>Facebook</b><br><small>@zeadelsayed9</small></div>
+            </a>
+            <a class="card" href="https://www.instagram.com/dr_zead_elsayed?igsh=MXJuMjh6dnU0Y29jYw==" target="_blank" rel="noopener">
+              <div class="ico" aria-hidden>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.2"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.2"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor"/></svg>
+              </div>
+              <div><b>Instagram</b><br><small>@dr_zead_elsayed</small></div>
+            </a>
+            <a class="card" href="https://www.snapchat.com/add/drzeadelsayed?share_id=F1-6gJ4uTVM&locale=ar-EG" target="_blank" rel="noopener">
+              <div class="ico" aria-hidden>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3c-2.7 0-5 2-5 4.8 0 1.8.8 2.8.6 4-.2 1.3-1.6 1.7-2.6 2-.6.2-.8.9-.3 1.3.6.5 1.5.9 2.6 1-.4.7-1.2 1.4-2.6 1.8-.6.2-.7 1 .1 1.2a9 9 0 0 0 2.6.2c.6 1.7 2.5 3.5 6.6 3.5 4 0 6-1.8 6.6-3.5a9 9 0 0 0 2.6-.2c.8-.2.7-1-.1-1.2-1.4-.4-2.2-1.1-2.6-1.8 1 0 2-.5 2.6-1 .5-.4.3-1.1-.3-1.3-1-.3-2.4-.7-2.6-2-.2-1.2.6-2.2.6-4C17 5 14.7 3 12 3Z" fill="currentColor"/></svg>
+              </div>
+              <div><b>Snapchat</b><br><small>@drzeadelsayed</small></div>
+            </a>
+            <a class="card" href="https://t.me/dr_zead" target="_blank" rel="noopener">
+              <div class="ico" aria-hidden>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 4 3.7 10.9c-.8.3-.8 1.5.1 1.7l4.5 1.3 1.9 4.9c.3.8 1.3.9 1.8.2l2.7-3.4 4.4 3.2c.7.5 1.7.1 1.9-.8L22.8 5.2c.2-.9-.6-1.6-1.5-1.2Z" fill="currentColor"/></svg>
+              </div>
+              <div><b>Telegram</b><br><small>@dr_zead</small></div>
+            </a>
+            <a class="card" href="https://youtube.com/@1The_Boss?si=YdEhYwi7pzYXsH8p" target="_blank" rel="noopener">
+              <div class="ico" aria-hidden>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="6" width="18" height="12" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M10 9.5v5l5-2.4-5-2.6Z" fill="currentColor"/></svg>
+              </div>
+              <div><b>YouTube</b><br><small>@1The_Boss</small></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="blob-wrap" aria-hidden>
+            <div class="blob" style="top:10%; right:10%"></div>
+            <div class="blob b2" style="bottom:10%; left:12%"></div>
+            <div class="blob b3" style="top:50%; left:50%"></div>
+          </div>
+          <div class="sparkle" aria-hidden>
+            <span style="top:10%; right:20%"></span>
+            <span style="bottom:6%; left:18%"></span>
+            <span style="top:40%; left:60%"></span>
+          </div>
+          <img class="portrait" src="photo.png" alt="صورتك الشفافة photo.png" title="photo.png" />
+          <!-- SVG gooey filter -->
+          <svg width="0" height="0">
+            <defs>
+              <filter id="gooey">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur"/>
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 28 -12"/>
+              </filter>
+            </defs>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== ABOUT ====== -->
+    <section class="reveal">
+      <h2>نبذة سريعة</h2>
+      <p class="muted" style="max-width:70ch">
+        أنا <b>Zead Elsayed</b> المُلقّب <b>The Boss</b> — طالب أسنان بجامعة سيناء (العريش). اهتماماتي تجمع بين <b>الطبّ السريري</b> و<b>تصميم الويب</b> وتجربة المستخدم.
+        أصمّم مواقع حديثة برسوم متحركة وانتقالات ناعمة، وأوثّق رحلتي الأكاديمية سنة بسنة بالصور والدورات والمشاريع.
+      </p>
+    </section>
+
+    <!-- ====== YEARS ====== -->
+    <section class="reveal">
+      <h2>أعمال سنوات الدراسة</h2>
+      <div class="years" id="years"></div>
+
+      <!-- Galleries container will mount here -->
+      <div id="galleries"></div>
+
+      <div class="pill" style="margin-top:16px"></div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap">
+      <img src="logo.jpg" alt="Logo" style="width:28px; height:28px; border-radius:8px; border:1px solid rgba(255,255,255,.1)">
+      <span>© <span id="yr"></span> Zead Elsayed — The Boss</span>
+      <span style="margin-inline-start:auto" class="muted">Made with ❤ </span>
+    </div>
+  </footer>
+
+  <!-- ====== Lightbox ====== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="عرض الصورة">
+    <img id="lightbox-img" alt="" />
+  </div>
+
+  <script>
+    // ====== Starfield background
+    (function starfield(){
+      const c = document.getElementById('stars');
+      const ctx = c.getContext('2d');
+      function resize(){ c.width = innerWidth; c.height = innerHeight; }
+      resize(); addEventListener('resize', resize);
+      const N = 160; const stars = [...Array(N)].map(()=>({
+        x: Math.random()*c.width,
+        y: Math.random()*c.height,
+        z: Math.random()*0.8 + 0.2,
+        vx: (Math.random()-.5)*.12,
+        vy: (Math.random()-.5)*.12,
+      }));
+      function tick(){
+        ctx.clearRect(0,0,c.width,c.height);
+        for(const s of stars){
+          s.x += s.vx; s.y += s.vy;
+          if(s.x<0||s.x>c.width) s.vx*=-1;
+          if(s.y<0||s.y>c.height) s.vy*=-1;
+          ctx.globalAlpha = s.z; ctx.fillStyle = '#fff';
+          ctx.beginPath(); ctx.arc(s.x,s.y, s.z*1.6, 0, Math.PI*2); ctx.fill();
+        }
+        requestAnimationFrame(tick);
+      }
+      tick();
+    })();
+
+    // ====== Build years tiles and galleries
+    const yearsData = [1,2,3,4,5];
+    const yearsRoot = document.getElementById('years');
+    const galleriesRoot = document.getElementById('galleries');
+
+    yearsData.forEach(year =>{
+      const tile = document.createElement('div');
+      tile.className = 'year-tile';
+      tile.innerHTML = `<b>Year ${year}</b><br><small class="muted">اضغط لعرض الصور</small>`;
+      tile.addEventListener('click', ()=> scrollToGallery(year));
+      yearsRoot.appendChild(tile);
+
+      // gallery block
+      const wrap = document.createElement('div');
+      wrap.className = 'reveal';
+      wrap.innerHTML = `<h3 style="margin:18px 0 6px">Year ${year}</h3>`;
+      const grid = document.createElement('div');
+      grid.className = 'gallery';
+
+      // Ten placeholders per year — file names explained in comments below
+      for(let i=1;i<=10;i++){
+        const ph = document.createElement('a');
+        ph.className = 'ph';
+        // Preferred filename: year{Y}-{i}.jpg  (e.g., year1-1.jpg)
+        // Alternate accepted:  y{Y}_{i}.jpg  or  Y{Y}={i}.jpg  (حسب طلبك)
+        const candidates = [
+          `year${year}-${i}.jpg`,
+          `y${year}_${i}.jpg`,
+          `Y${year}=${i}.jpg`,
+        ];
+        const img = document.createElement('img');
+        img.alt = `Year ${year} — صورة ${i}`;
+        img.loading = 'lazy';
+        img.src = candidates[0];
+        img.onerror = ()=>{ // try alternate names if first not found
+          img.onerror = ()=>{ img.onerror = null; img.src = candidates[2]; }
+          img.src = candidates[1];
+        };
+        ph.appendChild(img);
+        ph.addEventListener('click', (e)=>{ e.preventDefault(); openLightbox(img.src); });
+        grid.appendChild(ph);
+      }
+
+      wrap.appendChild(grid);
+      galleriesRoot.appendChild(wrap);
+    });
+
+    function scrollToGallery(year){
+      const h3s = [...document.querySelectorAll('#galleries h3')];
+      const target = h3s.find(h=>h.textContent.trim()===`Year ${year}`);
+      if(target){ target.scrollIntoView({behavior:'smooth', block:'start'}); }
+    }
+
+    // Lightbox
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+    function openLightbox(src){ lbImg.src = src; lb.classList.add('open'); }
+    lb.addEventListener('click', ()=> lb.classList.remove('open'));
+
+    // Reveal on scroll (IntersectionObserver)
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('show'); io.unobserve(en.target); } });
+    }, {threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
+
+    // Year in footer
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- =====================
+       تعليمات الملفات (اقرأني)
+       =====================
+  1) ضع «شعارك» باسم:  logo.jpg  في نفس مجلد هذا الملف.
+  2) ضع «صورتك المعزولة» باسم:  photo.png  (خلفية شفافة) في نفس المجلد.
+  3) صور السنوات:
+     لكل سنة 10 صور. يفضّل التسمية بالشكل التالي:
+       year1-1.jpg  ...  year1-10.jpg
+       year2-1.jpg  ...  year2-10.jpg
+       ...
+       year5-1.jpg  ...  year5-10.jpg
+     ولو حابب نفس أسلوبك في التسمية هيشتغل برضه (بدائل تلقائية):
+       Y1=1.jpg .. Y1=10.jpg   أو   y1_1.jpg .. y1_10.jpg
+  4) افتح الملف بالمتصفح مباشرة — كله في ملف واحد.
+  5) لو حبيت تغيّر النصوص/الألوان: عدّل المتغيّرات بالأعلى :root أو العناوين داخل الـ HTML.
+  -->
+</body>
+</html>
