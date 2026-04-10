@@ -1,401 +1,1122 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8" />
-  <meta property="og:title" content="Zead Elsayed | The Boss — Dentist Student | Links & Portfolio" />
-<meta property="og:description" content="الصفحة الرسمية لزياد السيد (The Boss) — طالب أسنان بجامعة سيناء/العريش ومصمم مواقع. روابط التواصل وأعمال سنوات الدراسة (1–5)." />
-<meta property="og:image" content="web.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#06070d;
-      --bg2:#0b0f1a;
-      --card:#0f1423aa; /* glass */
-      --text:#eef3ff;
-      --muted:#aab4d6;
-      --brand:#39e6c4;   /* فيروزي نيون */
-      --brand2:#ffd166;  /* ذهبي لطيف */
-      --danger:#ff477e;
-      --ok:#72f1b8;
-      --shadow: 0 10px 40px rgba(0,0,0,.35), 0 0 30px rgba(57,230,196,.08);
-      --radius: 24px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; background: radial-gradient(1200px 600px at 90% -10%, #12203a 0%, rgba(18,32,58,0) 60%),
-                               radial-gradient(900px 600px at -10% 10%, #0e1630 0%, rgba(14,22,48,0) 60%),
-                               linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
-      color:var(--text); font-family: 'Cairo','Tajawal', system-ui, sans-serif;
-      overflow-x:hidden;
-    }
-    a{color:inherit; text-decoration:none}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zead Elsayed | The Boss - Cosmic Ecosystem</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&family=Great+Vibes&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    /* ====== Header ====== */
-    header{
-      position:sticky; top:0; z-index:50;
-      background:linear-gradient(180deg, rgba(6,7,13,.9), rgba(6,7,13,.6));
-      backdrop-filter: blur(8px);
-      border-bottom:1px solid rgba(255,255,255,.06);
-    }
-    .container{width:min(1200px, 92vw); margin-inline:auto}
-    .nav{display:flex; align-items:center; gap:16px; padding:10px 0}
-    .logo{
-      width:52px; height:52px; border-radius:14px; overflow:hidden; flex:0 0 auto; border:1px solid rgba(255,255,255,.08);
-      box-shadow: 0 8px 24px rgba(0,0,0,.4);
-      background:#0b1020;
-    }
-    .brand-txt{display:flex; flex-direction:column; line-height:1.1}
-    .brand-txt b{font-weight:800; letter-spacing:.2px}
-    .brand-txt small{color:var(--muted)}
+    <style>
+        /* =========================================
+           1️⃣ Color Palette & Reset
+           ========================================= */
+        :root {
+            --bg-deep: #0b0014;
+            --bg-navy: #1a0525;
+            --neon-primary: #bb86fc;
+            --neon-secondary: #03dac6;
+            --luxury-gold: #ffd700;
+            --text-main: #ffffff;
+            --text-muted: #b0b0b0;
+            --glass-bg: rgba(26, 5, 37, 0.6);
+            --glass-border: rgba(187, 134, 252, 0.2);
+            --font-main: 'Cairo', sans-serif;
+            --font-sec: 'Tajawal', sans-serif;
+            --font-signature: 'Great Vibes', cursive;
+            --transition-speed: 0.4s;
+        }
 
-    /* ====== Hero ====== */
-    .hero{position:relative; padding: clamp(32px, 6vw, 64px) 0 40px;}
-    .hero-grid{display:grid; grid-template-columns: 1.1fr .9fr; gap: clamp(18px,3vw,28px); align-items:center}
-    @media (max-width: 900px){.hero-grid{grid-template-columns:1fr;}}
-    .title{font-size:clamp(28px, 3.2vw, 44px); font-weight:800; letter-spacing:.2px;}
-    .subtitle{color:var(--muted); font-size:clamp(16px,2vw,18px)}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: auto;
+        }
 
-    .tag{display:inline-flex; align-items:center; gap:8px; padding:.5rem .8rem; border-radius:999px;
-      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
-      border:1px solid rgba(255,255,255,.08); box-shadow: var(--shadow);
-      margin: 6px 6px 0 0; font-weight:700; font-size:.95rem
-    }
-    .tag i{display:inline-block; width:10px; height:10px; border-radius:999px; background:var(--brand); box-shadow:0 0 16px var(--brand);}
+        html {
+            scroll-behavior: smooth;
+        }
 
-    .hero-card{
-      position:relative; isolation:isolate; padding:20px; border-radius: calc(var(--radius) + 6px);
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      border:1px solid rgba(255,255,255,.08); box-shadow: var(--shadow);
-      overflow:hidden; min-height: 420px; display:grid; place-items:center
-    }
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            font-family: var(--font-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
-    /* Animated organic blob background (SVG filter gooey) */
-    .blob-wrap{position:absolute; inset:0; z-index:0; filter:url(#gooey); opacity:.9}
-    .blob{position:absolute; width:240px; height:240px; border-radius:50%;
-      background: radial-gradient(circle at 30% 30%, var(--brand) 0%, rgba(57,230,196,.2) 50%, rgba(57,230,196,0) 70%);
-      animation: floatXY 12s ease-in-out infinite;
-      mix-blend-mode: screen; opacity:.6;
-    }
-    .blob.b2{background: radial-gradient(circle at 30% 30%, var(--brand2) 0%, rgba(255,209,102,.2) 50%, rgba(255,209,102,0) 70%);
-      animation-duration: 15s; animation-delay:-3s
-    }
-    .blob.b3{background: radial-gradient(circle at 30% 30%, #8ab6ff 0%, rgba(138,182,255,.2) 50%, rgba(138,182,255,0) 70%);
-      animation-duration: 18s; animation-delay:-6s
-    }
-    @keyframes floatXY{
-      0%{transform: translate(0,0) scale(1)}
-      33%{transform: translate(-80px,30px) scale(1.12)}
-      66%{transform: translate(60px,-50px) scale(.92)}
-      100%{transform: translate(0,0) scale(1)}
-    }
+        /* =========================================
+           2️⃣ Starfield Background
+           ========================================= */
+        #starfield {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at center, var(--bg-navy) 0%, var(--bg-deep) 100%);
+        }
 
-    .portrait{position:relative; z-index:2; max-width:min(90%, 420px);
-      filter: drop-shadow(0 12px 40px rgba(0,0,0,.55)) drop-shadow(0 0 24px rgba(57,230,196,.25));
-      animation: popIn 900ms cubic-bezier(.2,.7,.2,1) 100ms both;
-    }
-    @keyframes popIn{from{transform:translateY(18px) scale(.98); opacity:0} to{transform:none; opacity:1}}
+        /* =========================================
+           3️⃣ Hero Section (Fixed Text Alignment)
+           ========================================= */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 2rem 5%;
+            flex-wrap: wrap;
+            position: relative;
+            padding-top: 80px;
+        }
 
-    /* Orbiting sparkles around the portrait */
-    .sparkle{position:absolute; inset:0; z-index:1; pointer-events:none}
-    .sparkle span{position:absolute; width:10px; height:10px; border-radius:50%; background: white; opacity:.9;
-      box-shadow:0 0 12px var(--brand), 0 0 30px var(--brand);
-      animation: orbit 10s linear infinite;
-    }
-    .sparkle span:nth-child(2){width:8px; height:8px; animation-duration: 13s}
-    .sparkle span:nth-child(3){width:6px; height:6px; animation-duration: 16s}
-    @keyframes orbit{from{transform: rotate(0deg) translateX(190px) rotate(0deg)} to{transform: rotate(360deg) translateX(190px) rotate(-360deg)}}
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+            z-index: 2;
+        }
 
-    /* ====== Link Cards ====== */
-    .links{display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap:16px; margin-top:18px}
-    .card{background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      border:1px solid rgba(255,255,255,.08); border-radius: var(--radius); padding:16px; box-shadow:var(--shadow);
-      display:flex; align-items:center; gap:12px; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
-    }
-    .card:hover{transform: translateY(-4px); border-color: rgba(57,230,196,.45); box-shadow:0 12px 50px rgba(57,230,196,.18)}
-    .ico{width:40px; height:40px; display:grid; place-items:center; border-radius:14px; background:rgba(57,230,196,.12); border:1px solid rgba(57,230,196,.4)}
-    .card b{font-weight:800}
-    .card small{color:var(--muted)}
+        .hero-greeting {
+            color: var(--neon-secondary);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-family: var(--font-sec);
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
 
-    /* ====== Years Gallery ====== */
-    section{padding: clamp(28px, 5vw, 48px) 0}
-    h2{font-size: clamp(22px, 2.4vw, 30px); margin:0 0 14px; letter-spacing:.3px}
-    .years{display:grid; grid-template-columns: repeat(5,1fr); gap:10px}
-    @media (max-width:1000px){.years{grid-template-columns: repeat(3,1fr)}}
-    @media (max-width:700px){.years{grid-template-columns: repeat(2,1fr)}}
+        .hero-title {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 5px;
+            color: var(--text-main);
+            font-weight: 900;
+            text-transform: uppercase;
+            min-height: 85px;
+        }
 
-    .year-tile{position:relative; overflow:hidden; border-radius:20px; background:
-      linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      border:1px solid rgba(255,255,255,.08); cursor:pointer; min-height:120px; display:grid; place-items:center;
-      transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
-    }
-    .year-tile:hover{transform: translateY(-4px); border-color: rgba(255,209,102,.5); box-shadow:0 14px 40px rgba(255,209,102,.15)}
-    .year-tile b{font-size:26px}
+        .cursor {
+            display: inline-block;
+            width: 4px;
+            background-color: var(--neon-primary);
+            animation: blink 1s infinite;
+        }
 
-    .gallery{display:grid; grid-template-columns: repeat(auto-fill, minmax(180px,1fr)); gap:12px; margin-top:14px}
-    .ph{position:relative; overflow:hidden; border-radius:16px; height: 170px; background:#0b1020; border:1px solid rgba(255,255,255,.08)}
-    .ph img{width:100%; height:100%; object-fit:cover; display:block; filter: saturate(1.05)}
-    .ph::after{content:"اضغط للعرض"; position:absolute; inset:auto 8px 8px 8px; padding:.35rem .6rem; border-radius:10px; font-size:.9rem;
-      background: rgba(0,0,0,.45); border:1px solid rgba(255,255,255,.12); color:#fff; opacity:0; transform: translateY(8px);
-      transition: .2s ease}
-    .ph:hover::after{opacity:1; transform:none}
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
 
-    /* Lightbox */
-    .lightbox{position:fixed; inset:0; background: rgba(0,0,0,.75); display:none; align-items:center; justify-content:center; padding:20px; z-index:60}
-    .lightbox.open{display:flex}
-    .lightbox img{max-width:min(92vw, 1100px); max-height:84vh; border-radius:18px; box-shadow:0 20px 80px rgba(0,0,0,.6)}
+        .hero-signature {
+            font-family: var(--font-signature);
+            font-size: 3rem;
+            color: var(--luxury-gold);
+            margin-bottom: 25px;
+            display: inline-block;
+            transform: rotate(-5deg);
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+            opacity: 0;
+            animation: fadeSig 1.5s ease-out 2.5s forwards;
+        }
 
-    /* Reveal on scroll */
-    .reveal{opacity:0; transform: translateY(14px); transition: .6s ease}
-    .reveal.show{opacity:1; transform:none}
+        @keyframes fadeSig {
+            to { opacity: 1; transform: rotate(-5deg) scale(1); }
+        }
 
-    /* ====== Animated starfield (canvas) ====== */
-    #stars{position:fixed; inset:0; z-index:-1; opacity:.5}
+        .hero-tags {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px; /* Reduced gap slightly */
+            flex-wrap: wrap;
+        }
 
-    /* footer */
-    footer{padding: 36px 0; color:var(--muted); border-top:1px solid rgba(255,255,255,.06); margin-top:30px}
-    .muted{color:var(--muted)}
+        .tag {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition-speed);
+            cursor: pointer;
+            backdrop-filter: blur(5px);
+        }
 
-    /* Small helper labels */
-    .pill{display:inline-block; font-size:.8rem; padding:.2rem .6rem; border-radius:999px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.06)}
-  </style>
+        .tag:hover {
+            background: rgba(187, 134, 252, 0.15);
+            border-color: var(--neon-primary);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(187, 134, 252, 0.3);
+        }
+
+        .tag i {
+            color: var(--neon-secondary);
+        }
+
+        /* FIXED: Paragraph Alignment */
+        .hero-text p {
+            color: var(--text-muted);
+            max-width: 450px; /* Controlled width */
+            text-align: left; /* Force Left Alignment */
+            margin-top: 20px; /* Clean spacing */
+            margin-left: 0; /* Ensure no auto centering */
+            font-size: 1rem;
+            line-height: 1.7; /* Better readability */
+            border-left: 3px solid var(--neon-secondary); /* Decorative border */
+            padding-left: 15px; /* Space between text and border */
+        }
+
+        .hero-visual {
+            position: relative;
+            width: 500px;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            margin-top: 20px;
+        }
+
+        /* Gooey Blobs */
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.4;
+            z-index: 0;
+            animation: float 12s infinite ease-in-out;
+        }
+
+        .blob-1 {
+            width: 400px;
+            height: 400px;
+            background: var(--neon-primary);
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            animation-delay: 0s;
+        }
+
+        .blob-2 {
+            width: 350px;
+            height: 350px;
+            background: var(--neon-secondary);
+            bottom: 20%;
+            left: 60%;
+            animation-delay: -5s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.2); }
+        }
+
+        /* Clean Image */
+        .character-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            z-index: 2;
+            padding-bottom: 20px;
+        }
+
+        .character-img {
+            position: relative;
+            max-height: 85vh;
+            max-width: 100%;
+            width: auto;
+            z-index: 10;
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .character-wrapper:hover .character-img {
+            transform: translateY(-15px) scale(1.02);
+        }
+
+        /* Orbits */
+        .orbit {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 450px;
+            height: 450px;
+            transform: translate(-50%, -50%);
+            border: 1px solid rgba(187, 134, 252, 0.1);
+            border-radius: 50%;
+            animation: spin 30s linear infinite;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .orbit-star {
+            position: absolute;
+            top: -5px;
+            left: 50%;
+            width: 10px;
+            height: 10px;
+            background: var(--luxury-gold);
+            border-radius: 50%;
+            box-shadow: 0 0 15px var(--luxury-gold);
+            transform: translateX(-50%);
+        }
+
+        .orbit:nth-child(2) {
+            width: 550px;
+            height: 550px;
+            animation-duration: 40s;
+            animation-direction: reverse;
+            border-style: dotted;
+            border-color: rgba(3, 218, 198, 0.15);
+        }
+
+        @keyframes spin {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        /* =========================================
+           4️⃣ Social Network
+           ========================================= */
+        .social-section {
+            padding: 4rem 5%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--text-main);
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--neon-primary);
+            margin: 10px auto 0;
+            border-radius: 2px;
+            box-shadow: 0 0 10px var(--neon-primary);
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glass-border);
+            padding: 2rem;
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-main);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .social-card:hover {
+            transform: translateY(-10px);
+            background: rgba(26, 5, 37, 0.8);
+            border-color: var(--neon-primary);
+            box-shadow: 0 15px 30px rgba(187, 134, 252, 0.2);
+        }
+
+        .social-card i {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            transition: transform 0.3s;
+        }
+        .social-card:hover i { transform: scale(1.1) rotate(5deg); }
+        
+        .fa-whatsapp { color: #25D366; }
+        .fa-facebook { color: #1877F2; }
+        .fa-instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); -webkit-background-clip: text; color: transparent; }
+        .fa-snapchat { color: #FFFC00; }
+        .fa-telegram { color: #0088cc; }
+        .fa-youtube { color: #FF0000; }
+
+        /* =========================================
+           5️⃣ Portfolio (Gallery)
+           ========================================= */
+        .portfolio-section {
+            padding: 4rem 5%;
+            background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.4));
+            flex: 1;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .year-btn {
+            background: transparent;
+            border: 1px solid var(--glass-border);
+            color: var(--text-muted);
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-family: var(--font-sec);
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .year-btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 0%; height: 100%;
+            background: var(--neon-primary);
+            transition: width 0.3s;
+            z-index: -1;
+        }
+
+        .year-btn:hover, .year-btn.active {
+            color: #fff;
+            border-color: var(--neon-primary);
+            box-shadow: 0 0 20px rgba(187, 134, 252, 0.4);
+        }
+        .year-btn:hover::before, .year-btn.active::before { width: 100%; }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
+            gap: 15px;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: 400px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            background: var(--bg-navy);
+            border: 1px solid var(--glass-border);
+            opacity: 0;
+            animation: slideUp 0.6s forwards;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        /* Video Styling in Gallery */
+        .gallery-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .gallery-item:hover img, .gallery-item:hover video {
+            transform: scale(1.1);
+        }
+        .gallery-item:hover { border-color: var(--neon-secondary); }
+
+        .skeleton {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, var(--bg-navy) 25%, #2a1540 50%, var(--bg-navy) 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* =========================================
+           6️⃣ Footer
+           ========================================= */
+        footer {
+            background: rgba(11, 0, 20, 0.9);
+            backdrop-filter: blur(15px);
+            border-top: 1px solid var(--glass-border);
+            padding: 2rem 5%;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid var(--luxury-gold);
+            object-fit: cover;
+        }
+
+        .footer-text h2 {
+            color: var(--luxury-gold);
+            font-size: 1rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* =========================================
+           7️⃣ Lightbox
+           ========================================= */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .lightbox img, .lightbox video {
+            max-width: 90%;
+            max-height: 80vh;
+            border: 2px solid var(--neon-gold);
+            border-radius: 10px;
+            box-shadow: 0 0 50px rgba(187, 134, 252, 0.5);
+            animation: zoomIn 0.3s ease;
+        }
+        
+        .lightbox video {
+            outline: none;
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .lightbox-controls {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        .lightbox-btn {
+            pointer-events: auto;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--glass-border);
+            color: white;
+            font-size: 2rem;
+            padding: 15px 25px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.3s;
+            backdrop-filter: blur(5px);
+        }
+
+        .lightbox-btn:hover {
+            background: var(--neon-primary);
+            color: #000;
+            transform: scale(1.1);
+        }
+
+        .close-lightbox {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 3rem;
+            cursor: pointer;
+            z-index: 10001;
+            transition: 0.3s;
+        }
+        .close-lightbox:hover { color: var(--neon-secondary); transform: rotate(90deg); }
+
+        .lightbox-caption {
+            margin-top: 15px;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            font-family: var(--font-sec);
+        }
+
+        /* =========================================
+           8️⃣ Notification Toast
+           ========================================= */
+        #toast-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .toast {
+            background: rgba(26, 5, 37, 0.9);
+            backdrop-filter: blur(10px);
+            border-right: 4px solid var(--neon-primary);
+            color: #fff;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-width: 250px;
+            font-family: var(--font-sec);
+            font-size: 0.95rem;
+            animation: slideInRight 0.5s ease forwards;
+        }
+
+        .toast.hide {
+            animation: fadeOutRight 0.5s ease forwards;
+        }
+
+        .toast i {
+            color: var(--neon-secondary);
+            font-size: 1.2rem;
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(120%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes fadeOutRight {
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(120%); opacity: 0; }
+        }
+
+        /* =========================================
+           9️⃣ Music Toggle Button
+           ========================================= */
+        .music-btn {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--glass-border);
+            color: var(--text-muted);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .music-btn:hover {
+            background: rgba(187, 134, 252, 0.2);
+            color: var(--neon-secondary);
+            transform: scale(1.1);
+        }
+
+        .music-btn.active {
+            color: var(--neon-primary);
+            border-color: var(--neon-primary);
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .hero { flex-direction: column-reverse; text-align: center; padding-top: 100px; }
+            .hero-text p { 
+                text-align: center; /* Center on mobile for better look */
+                margin-left: auto; 
+                margin-right: auto;
+            }
+            .hero-title { font-size: 2.2rem; }
+            .hero-signature { font-size: 2.2rem; }
+            .hero-visual { width: 100%; height: 500px; }
+            .character-img { max-height: 75vh; }
+            .orbit, .orbit:nth-child(2) { display: none; }
+            .controls { flex-direction: column; align-items: center; }
+            .lightbox-btn { padding: 10px 15px; font-size: 1.5rem; }
+            .gallery-container { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+            .music-btn { top: 85px; width: 40px; height: 40px; font-size: 1rem; }
+        }
+    </style>
 </head>
 <body>
-  <!-- background stars canvas -->
-  <canvas id="stars"></canvas>
 
-  <header>
-    <div class="container nav">
-      <img id="siteLogo" class="logo" src="logo.jpg" alt="Logo" title="logo.jpg" />
-      <div class="brand-txt">
-        <b>Zead Elsayed <span class="muted"></span> <span style="color:var(--brand2)"></span></b>
-        <small> </small>
-      </div>
-      <div style="margin-inline-start:auto" class="pill"></div>
-    </div>
-  </header>
+    <!-- Background Music (1.mp3) -->
+    <audio id="bg-audio" loop>
+        <source src="1.mp3" type="audio/mpeg">
+    </audio>
 
-  <main class="container">
-    <!-- ====== HERO ====== -->
-    <section class="hero">
-      <div class="hero-grid">
-        <div>
-          <h1 class="title">مرحباً، أنا <span style="color:var(--brand2)">Zead Elsayed</span> <span class="muted">(</span><span style="color:var(--brand)">The Boss</span><span class="muted">)</span></h1>
-          <p class="subtitle">طالب طب أسنان بجامعة سيناء – العريش، .
-          </p>
-          <div style="margin-top:10px">
-            <span class="tag"><i></i> Dentistry Student</span>
-            <span class="tag"><i></i> Web Designer</span>
-        
-          </div>
+    <!-- Music Toggle Button -->
+    <button id="music-toggle" class="music-btn" title="Toggle Music">
+        <i class="fa-solid fa-music"></i>
+    </button>
 
-          <div class="links">
-            <a class="card" href="https://wa.me/message/TQP2VP6NCWNIJ1?src=qr" target="_blank" rel="noopener">
-              <div class="ico" aria-hidden>
-                <!-- WhatsApp icon -->
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.5 3.5A10 10 0 0 0 3.7 17.6L3 21l3.5-.7A10 10 0 1 0 20.5 3.5Z" stroke="currentColor" stroke-width="1.3"/><path d="M8.5 8.5c0 4 3.5 7 6.5 7 .6 0 1.6-.4 2-.9l.5-.6c.2-.2.2-.5 0-.7l-1.5-1.4c-.2-.2-.5-.2-.7 0l-.8.8c-.2.2-.5.2-.7 0L11.8 11c-.2-.2-.2-.5 0-.7l.8-.8c.2-.2.2-.5 0-.7L12 7.3c-.2-.2-.5-.2-.7 0l-.6.5c-.6.4-1.2 1.4-1.2 1.7Z" fill="currentColor"/></svg>
-              </div>
-              <div><b>WhatsApp</b><br><small>تواصل مباشر</small></div>
-            </a>
-            <a class="card" href="https://www.facebook.com/zeadelsayed9?mibextid=ZbWKwL" target="_blank" rel="noopener">
-              <div class="ico" aria-hidden>
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 20v-7h2.3l.4-3H13V8.4c0-.9.2-1.4 1.5-1.4H16V4.3C15.8 4.2 15 4 14 4c-2.2 0-3.6 1.3-3.6 3.7V10H8v3h2.4v7H13Z" fill="currentColor"/></svg>
-              </div>
-              <div><b>Facebook</b><br><small>@zeadelsayed9</small></div>
-            </a>
-            <a class="card" href="https://www.instagram.com/dr_zead_elsayed?igsh=MXJuMjh6dnU0Y29jYw==" target="_blank" rel="noopener">
-              <div class="ico" aria-hidden>
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.2"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.2"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor"/></svg>
-              </div>
-              <div><b>Instagram</b><br><small>@dr_zead_elsayed</small></div>
-            </a>
-            <a class="card" href="https://www.snapchat.com/add/drzeadelsayed?share_id=F1-6gJ4uTVM&locale=ar-EG" target="_blank" rel="noopener">
-              <div class="ico" aria-hidden>
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3c-2.7 0-5 2-5 4.8 0 1.8.8 2.8.6 4-.2 1.3-1.6 1.7-2.6 2-.6.2-.8.9-.3 1.3.6.5 1.5.9 2.6 1-.4.7-1.2 1.4-2.6 1.8-.6.2-.7 1 .1 1.2a9 9 0 0 0 2.6.2c.6 1.7 2.5 3.5 6.6 3.5 4 0 6-1.8 6.6-3.5a9 9 0 0 0 2.6-.2c.8-.2.7-1-.1-1.2-1.4-.4-2.2-1.1-2.6-1.8 1 0 2-.5 2.6-1 .5-.4.3-1.1-.3-1.3-1-.3-2.4-.7-2.6-2-.2-1.2.6-2.2.6-4C17 5 14.7 3 12 3Z" fill="currentColor"/></svg>
-              </div>
-              <div><b>Snapchat</b><br><small>@drzeadelsayed</small></div>
-            </a>
-            <a class="card" href="https://t.me/dr_zead" target="_blank" rel="noopener">
-              <div class="ico" aria-hidden>
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 4 3.7 10.9c-.8.3-.8 1.5.1 1.7l4.5 1.3 1.9 4.9c.3.8 1.3.9 1.8.2l2.7-3.4 4.4 3.2c.7.5 1.7.1 1.9-.8L22.8 5.2c.2-.9-.6-1.6-1.5-1.2Z" fill="currentColor"/></svg>
-              </div>
-              <div><b>Telegram</b><br><small>@dr_zead</small></div>
-            </a>
-            <a class="card" href="https://youtube.com/@1The_Boss?si=YdEhYwi7pzYXsH8p" target="_blank" rel="noopener">
-              <div class="ico" aria-hidden>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="6" width="18" height="12" rx="3" stroke="currentColor" stroke-width="1.2"/><path d="M10 9.5v5l5-2.4-5-2.6Z" fill="currentColor"/></svg>
-              </div>
-              <div><b>YouTube</b><br><small>@1The_Boss</small></div>
-            </a>
-          </div>
+    <!-- Starfield Background -->
+    <canvas id="starfield"></canvas>
+
+    <!-- Notification Container -->
+    <div id="toast-container"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-text">
+                <p class="hero-greeting">Welcome to my Universe</p>
+                
+                <h1 class="hero-title">
+                    <span id="typewriter-text"></span><span class="cursor">&nbsp;</span>
+                </h1>
+
+                <div class="hero-signature">The Boss</div>
+                
+                <div class="hero-tags">
+                    <div class="tag">
+                        <i class="fa-solid fa-tooth"></i>
+                        <span>Dentistry Student</span>
+                    </div>
+                    <div class="tag">
+                        <i class="fa-solid fa-code"></i>
+                        <span>Web Designer</span>
+                    </div>
+                </div>
+                
+                <!-- Fixed Paragraph -->
+                <p>
+                    Merging the precision of dentistry with the artistry of digital design. A portal to a world where science meets innovation.
+                </p>
+            </div>
+
+            <div class="hero-visual">
+                <!-- Background Atmosphere -->
+                <div class="blob blob-1"></div>
+                <div class="blob blob-2"></div>
+                <div class="orbit"><div class="orbit-star"></div></div>
+                <div class="orbit"><div class="orbit-star" style="background: var(--neon-secondary);"></div></div>
+                
+                <!-- Clean Image Structure -->
+                <div class="character-wrapper">
+                    <img src="photo.png" alt="Zead Elsayed" class="character-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Section -->
+        <section class="social-section">
+            <h2 class="section-title">Connect With Me</h2>
+            <div class="social-grid">
+                <a href="https://wa.me/message/TQP2VP6NCWNIJ1?src=qr" class="social-card" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="https://www.facebook.com/zeadelsayed9?mibextid=ZbWKwL" class="social-card" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://www.instagram.com/dr_zead_elsayed?igsh=MXJuMjh6dnU0Y29jYw==" class="social-card" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://www.snapchat.com/add/drzeadelsayed?share_id=F1-6gJ4uTVM&locale=ar-EG" class="social-card" target="_blank">
+                    <i class="fa-brands fa-snapchat"></i>
+                    <span>Snapchat</span>
+                </a>
+                <a href="https://t.me/dr_zead" class="social-card" target="_blank">
+                    <i class="fa-brands fa-telegram"></i>
+                    <span>Telegram</span>
+                </a>
+                <a href="https://youtube.com/@1The_Boss?si=YdEhYwi7pzYXsH8p" class="social-card" target="_blank">
+                    <i class="fa-brands fa-youtube"></i>
+                    <span>YouTube</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="portfolio-section">
+            <div style="text-align: center;">
+                <h2 class="section-title">Academic Journey</h2>
+            </div>
+            
+            <div class="controls">
+                <button class="year-btn active" data-year="1">Year 1</button>
+                <button class="year-btn" data-year="2">Year 2</button>
+                <button class="year-btn" data-year="3">Year 3</button>
+                <button class="year-btn" data-year="4">Year 4</button>
+                <button class="year-btn" data-year="5">Year 5</button>
+            </div>
+
+            <div class="gallery-container" id="gallery">
+                <!-- Images/Videos load here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <img src="logo.jpg" alt="Logo" class="footer-logo">
+            <div class="footer-text">
+                <h2>Zead Elsayed</h2>
+                <span style="font-size: 0.7rem; color: #888;">THE BOSS</span>
+            </div>
         </div>
+        <p style="margin-top: 15px; font-size: 0.8rem; color: #555;">&copy; 2026 The Boss. All Rights Reserved.</p>
+    </footer>
 
-        <div class="hero-card">
-          <div class="blob-wrap" aria-hidden>
-            <div class="blob" style="top:10%; right:10%"></div>
-            <div class="blob b2" style="bottom:10%; left:12%"></div>
-            <div class="blob b3" style="top:50%; left:50%"></div>
-          </div>
-          <div class="sparkle" aria-hidden>
-            <span style="top:10%; right:20%"></span>
-            <span style="bottom:6%; left:18%"></span>
-            <span style="top:40%; left:60%"></span>
-          </div>
-          <img class="portrait" src="photo.png" alt="صورتك الشفافة photo.png" title="photo.png" />
-          <!-- SVG gooey filter -->
-          <svg width="0" height="0">
-            <defs>
-              <filter id="gooey">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur"/>
-                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 28 -12"/>
-              </filter>
-            </defs>
-          </svg>
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <div id="lightbox-content"></div>
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+        <div class="lightbox-controls">
+            <button class="lightbox-btn" id="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="lightbox-btn" id="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
-      </div>
-    </section>
-
-   
-
-    <!-- ====== YEARS ====== -->
-    <section class="reveal">
-      <h2>أعمال سنوات الدراسة</h2>
-      <div class="years" id="years"></div>
-
-      <!-- Galleries container will mount here -->
-      <div id="galleries"></div>
-
-      <div class="pill" style="margin-top:16px"></div>
-    </section>
-  </main>
-
-  <footer class="container">
-    <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap">
-      <img src="logo.jpg" alt="Logo" style="width:28px; height:28px; border-radius:8px; border:1px solid rgba(255,255,255,.1)">
-      <span>© <span id="yr"></span> Zead Elsayed — The Boss</span>
-      <span style="margin-inline-start:auto" class="muted">Made with ❤ </span>
     </div>
-  </footer>
 
-  <!-- ====== Lightbox ====== -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="عرض الصورة">
-    <img id="lightbox-img" alt="" />
-  </div>
+    <script>
+        /* =========================================
+           1️⃣ Typewriter Effect
+           ========================================= */
+        const textToType = "Dr: Zead Elsayed";
+        const typeContainer = document.getElementById("typewriter-text");
+        let typeIndex = 0;
 
-  <script>
-    // ====== Starfield background
-    (function starfield(){
-      const c = document.getElementById('stars');
-      const ctx = c.getContext('2d');
-      function resize(){ c.width = innerWidth; c.height = innerHeight; }
-      resize(); addEventListener('resize', resize);
-      const N = 160; const stars = [...Array(N)].map(()=>({
-        x: Math.random()*c.width,
-        y: Math.random()*c.height,
-        z: Math.random()*0.8 + 0.2,
-        vx: (Math.random()-.5)*.12,
-        vy: (Math.random()-.5)*.12,
-      }));
-      function tick(){
-        ctx.clearRect(0,0,c.width,c.height);
-        for(const s of stars){
-          s.x += s.vx; s.y += s.vy;
-          if(s.x<0||s.x>c.width) s.vx*=-1;
-          if(s.y<0||s.y>c.height) s.vy*=-1;
-          ctx.globalAlpha = s.z; ctx.fillStyle = '#fff';
-          ctx.beginPath(); ctx.arc(s.x,s.y, s.z*1.6, 0, Math.PI*2); ctx.fill();
+        function typeWriter() {
+            if (typeIndex < textToType.length) {
+                typeContainer.innerHTML += textToType.charAt(typeIndex);
+                typeIndex++;
+                setTimeout(typeWriter, 100);
+            }
         }
-        requestAnimationFrame(tick);
-      }
-      tick();
-    })();
+        window.addEventListener('load', () => { setTimeout(typeWriter, 500); });
 
-    // ====== Build years tiles and galleries
-    const yearsData = [1,2,3,4,5];
-    const yearsRoot = document.getElementById('years');
-    const galleriesRoot = document.getElementById('galleries');
+        /* =========================================
+           2️⃣ Starfield Logic
+           ========================================= */
+        const canvas = document.getElementById('starfield');
+        const ctx = canvas.getContext('2d');
+        let width, height, stars = [];
 
-    yearsData.forEach(year =>{
-      const tile = document.createElement('div');
-      tile.className = 'year-tile';
-      tile.innerHTML = `<b>Year ${year}</b><br><small class="muted">اضغط لعرض الصور</small>`;
-      tile.addEventListener('click', ()=> scrollToGallery(year));
-      yearsRoot.appendChild(tile);
+        function initCanvas() {
+            width = window.innerWidth; height = window.innerHeight;
+            canvas.width = width; canvas.height = height;
+            createStars();
+        }
+        function createStars() {
+            stars = [];
+            const starCount = Math.floor((width * height) / 3000);
+            for (let i = 0; i < starCount; i++) {
+                stars.push({
+                    x: Math.random() * width, y: Math.random() * height,
+                    size: Math.random() * 1.5 + 0.5, speed: Math.random() * 0.4 + 0.1,
+                    color: Math.random() > 0.8 ? '#bb86fc' : '#ffffff'
+                });
+            }
+        }
+        function animateStars() {
+            ctx.clearRect(0, 0, width, height);
+            stars.forEach(star => {
+                ctx.fillStyle = star.color;
+                ctx.beginPath(); ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2); ctx.fill();
+                star.y -= star.speed;
+                if (star.y < 0) { star.y = height; star.x = Math.random() * width; }
+            });
+            requestAnimationFrame(animateStars);
+        }
+        window.addEventListener('resize', initCanvas); initCanvas(); animateStars();
 
-      // gallery block
-      const wrap = document.createElement('div');
-      wrap.className = 'reveal';
-      wrap.innerHTML = `<h3 style="margin:18px 0 6px">Year ${year}</h3>`;
-      const grid = document.createElement('div');
-      grid.className = 'gallery';
+        /* =========================================
+           3️⃣ Background Music Logic (1.mp3)
+           ========================================= */
+        const audio = document.getElementById('bg-audio');
+        const musicBtn = document.getElementById('music-toggle');
+        let isPlaying = false;
 
-      // Ten placeholders per year — file names explained in comments below
-      for(let i=1;i<=10;i++){
-        const ph = document.createElement('a');
-        ph.className = 'ph';
-        // Preferred filename: year{Y}-{i}.jpg  (e.g., year1-1.jpg)
-        // Alternate accepted:  y{Y}_{i}.jpg  or  Y{Y}={i}.jpg  (حسب طلبك)
-        const candidates = [
-          `year${year}-${i}.jpg`,
-          `y${year}_${i}.jpg`,
-          `Y${year}=${i}.jpg`,
-        ];
-        const img = document.createElement('img');
-        img.alt = `Year ${year} — صورة ${i}`;
-        img.loading = 'lazy';
-        img.src = candidates[0];
-        img.onerror = ()=>{ // try alternate names if first not found
-          img.onerror = ()=>{ img.onerror = null; img.src = candidates[2]; }
-          img.src = candidates[1];
+        // Attempt autoplay on load
+        window.addEventListener('load', () => {
+            audio.play().then(() => {
+                isPlaying = true;
+                musicBtn.classList.add('active');
+            }).catch(error => {
+                // Autoplay prevented by browser (common issue)
+                console.log("Autoplay prevented by browser policy.");
+                isPlaying = false;
+                musicBtn.classList.remove('active');
+            });
+        });
+
+        musicBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                audio.pause();
+                musicBtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+                musicBtn.classList.remove('active');
+            } else {
+                audio.play();
+                musicBtn.innerHTML = '<i class="fa-solid fa-music"></i>';
+                musicBtn.classList.add('active');
+            }
+            isPlaying = !isPlaying;
+        });
+
+        /* =========================================
+           4️⃣ Notifications Logic
+           ========================================= */
+        const toastContainer = document.getElementById('toast-container');
+
+        function showToast(message, iconClass) {
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.innerHTML = `<i class="${iconClass}"></i> <span>${message}</span>`;
+            toastContainer.appendChild(toast);
+            setTimeout(() => {
+                toast.classList.add('hide');
+                toast.addEventListener('animationend', () => { toast.remove(); });
+            }, 5000);
+        }
+
+        setTimeout(() => { showToast("ارحب ", "fa-solid fa-hand-sparkles"); }, 2000);
+        setTimeout(() => { showToast("صلي على النبي ﷺ", "fa-solid fa-moon"); }, 15000);
+
+        /* =========================================
+           5️⃣ Gallery & Lightbox Logic
+           ========================================= */
+        const gallery = document.getElementById('gallery');
+        const yearBtns = document.querySelectorAll('.year-btn');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxContent = document.getElementById('lightbox-content');
+        const caption = document.getElementById('lightbox-caption');
+        const closeBtn = document.querySelector('.close-lightbox');
+        const nextBtn = document.getElementById('next-btn');
+        const prevBtn = document.getElementById('prev-btn');
+
+        let currentMedia = [];
+        let currentIndex = 0;
+        let slideInterval;
+
+        const imageConfig = { 
+            1: 10, 
+            2: 4, 
+            3: 100, 
+            4: 100, 
+            5: 100  
         };
-        ph.appendChild(img);
-        ph.addEventListener('click', (e)=>{ e.preventDefault(); openLightbox(img.src); });
-        grid.appendChild(ph);
-      }
 
-      wrap.appendChild(grid);
-      galleriesRoot.appendChild(wrap);
-    });
+        function loadGallery(year) {
+            gallery.innerHTML = '';
+            currentMedia = [];
+            const limit = imageConfig[year];
 
-    function scrollToGallery(year){
-      const h3s = [...document.querySelectorAll('#galleries h3')];
-      const target = h3s.find(h=>h.textContent.trim()===`Year ${year}`);
-      if(target){ target.scrollIntoView({behavior:'smooth', block:'start'}); }
-    }
+            for (let i = 1; i <= limit; i++) {
+                const item = document.createElement('div');
+                item.className = 'gallery-item';
+                const skeleton = document.createElement('div');
+                skeleton.className = 'skeleton';
+                item.appendChild(skeleton);
 
-    // Lightbox
-    const lb = document.getElementById('lightbox');
-    const lbImg = document.getElementById('lightbox-img');
-    function openLightbox(src){ lbImg.src = src; lb.classList.add('open'); }
-    lb.addEventListener('click', ()=> lb.classList.remove('open'));
+                const img = document.createElement('img');
+                const imgSrc = `${year}-${i}.jpg`;
+                img.src = imgSrc;
+                img.alt = `Year ${year} Work ${i}`;
+                
+                item.onclick = () => openLightbox(imgSrc, year, i, 'image');
 
-    // Reveal on scroll (IntersectionObserver)
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('show'); io.unobserve(en.target); } });
-    }, {threshold:.12});
-    document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
+                img.onerror = function() {
+                    this.remove(); 
+                    skeleton.remove();
 
-    // Year in footer
-    document.getElementById('yr').textContent = new Date().getFullYear();
-  </script>
+                    const video = document.createElement('video');
+                    video.src = `${year}-${i}.mp4`; 
+                    video.muted = true;
+                    video.loop = true;
+                    video.playsInline = true;
+                    
+                    item.onmouseover = () => video.play();
+                    item.onmouseout = () => video.pause();
+                    
+                    video.onerror = function() {
+                         item.style.display = 'none';
+                    }
+                    
+                    video.style.width = '100%';
+                    video.style.height = '100%';
+                    video.style.objectFit = 'cover';
+                    
+                    item.onclick = () => openLightbox(video.src, year, i, 'video');
 
-  <!-- =====================
-       تعليمات الملفات (اقرأني)
-       =====================
-  1) ضع «شعارك» باسم:  logo.jpg  في نفس مجلد هذا الملف.
-  2) ضع «صورتك المعزولة» باسم:  photo.png  (خلفية شفافة) في نفس المجلد.
-  3) صور السنوات:
-     لكل سنة 10 صور. يفضّل التسمية بالشكل التالي:
-       year1-1.jpg  ...  year1-10.jpg
-       year2-1.jpg  ...  year2-10.jpg
-       ...
-       year5-1.jpg  ...  year5-10.jpg
-     ولو حابب نفس أسلوبك في التسمية هيشتغل برضه (بدائل تلقائية):
-       Y1=1.jpg .. Y1=10.jpg   أو   y1_1.jpg .. y1_10.jpg
-  4) افتح الملف بالمتصفح مباشرة — كله في ملف واحد.
-  5) لو حبيت تغيّر النصوص/الألوان: عدّل المتغيّرات بالأعلى :root أو العناوين داخل الـ HTML.
-  -->
+                    item.appendChild(video);
+                    skeleton.style.display = 'none';
+                };
+                
+                img.onload = () => {
+                    skeleton.style.display = 'none';
+                    currentMedia.push({ src: imgSrc, name: `Year ${year} - Image ${i}`, type: 'image' });
+                };
+                
+                item.appendChild(img);
+                gallery.appendChild(item);
+            }
+        }
+
+        loadGallery(1);
+
+        yearBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                yearBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                loadGallery(btn.dataset.year);
+            });
+        });
+
+        /* --- Lightbox Functions --- */
+
+        function openLightbox(src, year, num, type) {
+            lightbox.style.display = 'flex';
+            caption.innerText = `Year ${year} - Item ${num}`;
+            lightboxContent.innerHTML = '';
+
+            if (type === 'video') {
+                const video = document.createElement('video');
+                video.src = src;
+                video.controls = true;
+                video.autoplay = true;
+                video.style.maxWidth = '90%';
+                video.style.maxHeight = '80vh';
+                video.style.borderRadius = '10px';
+                video.style.border = '2px solid var(--neon-gold)';
+                lightboxContent.appendChild(video);
+            } else {
+                const img = document.createElement('img');
+                img.src = src;
+                lightboxContent.appendChild(img);
+            }
+
+            currentIndex = currentMedia.findIndex(m => m.src === src);
+            if(type === 'image') startSlideshow();
+        }
+
+        function closeLightboxFunc() {
+            lightbox.style.display = 'none';
+            lightboxContent.innerHTML = ''; 
+            stopSlideshow();
+        }
+
+        function showNext() {
+            currentIndex++;
+            if (currentIndex >= currentMedia.length) { currentIndex = 0; }
+            updateLightboxContent();
+        }
+
+        function showPrev() {
+            currentIndex--;
+            if (currentIndex < 0) { currentIndex = currentMedia.length - 1; }
+            updateLightboxContent();
+        }
+
+        function updateLightboxContent() {
+            const item = currentMedia[currentIndex];
+            if(!item) return;
+
+            caption.innerText = item.name;
+            lightboxContent.innerHTML = '';
+
+            if (item.type === 'video') {
+                const video = document.createElement('video');
+                video.src = item.src;
+                video.controls = true;
+                video.autoplay = true;
+                video.style.maxWidth = '90%';
+                video.style.maxHeight = '80vh';
+                video.style.borderRadius = '10px';
+                video.style.border = '2px solid var(--neon-gold)';
+                lightboxContent.appendChild(video);
+            } else {
+                const img = document.createElement('img');
+                img.src = item.src;
+                lightboxContent.appendChild(img);
+            }
+        }
+
+        function startSlideshow() {
+            stopSlideshow();
+            slideInterval = setInterval(() => { showNext(); }, 3000);
+        }
+
+        function stopSlideshow() {
+            clearInterval(slideInterval);
+        }
+
+        closeBtn.addEventListener('click', closeLightboxFunc);
+        nextBtn.addEventListener('click', () => { stopSlideshow(); showNext(); });
+        prevBtn.addEventListener('click', () => { stopSlideshow(); showPrev(); });
+        lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightboxFunc(); });
+
+        document.addEventListener('keydown', (e) => {
+            if (lightbox.style.display === 'flex') {
+                if (e.key === 'Escape') closeLightboxFunc();
+                if (e.key === 'ArrowRight') { stopSlideshow(); showNext(); }
+                if (e.key === 'ArrowLeft') { stopSlideshow(); showPrev(); }
+            }
+        });
+
+    </script>
 </body>
 </html>
