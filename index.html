@@ -69,7 +69,7 @@
         }
 
         /* =========================================
-           3️⃣ Hero Section (Fixed Text Alignment)
+           3️⃣ Hero Section
            ========================================= */
         .hero {
             min-height: 100vh;
@@ -138,7 +138,7 @@
         .hero-tags {
             display: flex;
             gap: 15px;
-            margin-bottom: 25px; /* Reduced gap slightly */
+            margin-bottom: 25px;
             flex-wrap: wrap;
         }
 
@@ -166,17 +166,16 @@
             color: var(--neon-secondary);
         }
 
-        /* FIXED: Paragraph Alignment */
         .hero-text p {
             color: var(--text-muted);
-            max-width: 450px; /* Controlled width */
-            text-align: left; /* Force Left Alignment */
-            margin-top: 20px; /* Clean spacing */
-            margin-left: 0; /* Ensure no auto centering */
+            max-width: 450px;
+            text-align: left;
+            margin-top: 20px;
+            margin-left: 0;
             font-size: 1rem;
-            line-height: 1.7; /* Better readability */
-            border-left: 3px solid var(--neon-secondary); /* Decorative border */
-            padding-left: 15px; /* Space between text and border */
+            line-height: 1.7;
+            border-left: 3px solid var(--neon-secondary);
+            padding-left: 15px;
         }
 
         .hero-visual {
@@ -189,7 +188,6 @@
             margin-top: 20px;
         }
 
-        /* Gooey Blobs */
         .blob {
             position: absolute;
             border-radius: 50%;
@@ -223,7 +221,6 @@
             50% { transform: translateX(-50%) scale(1.2); }
         }
 
-        /* Clean Image */
         .character-wrapper {
             position: relative;
             width: 100%;
@@ -249,7 +246,6 @@
             transform: translateY(-15px) scale(1.02);
         }
 
-        /* Orbits */
         .orbit {
             position: absolute;
             top: 50%;
@@ -440,7 +436,6 @@
             transition: transform 0.6s ease;
         }
 
-        /* Video Styling in Gallery */
         .gallery-item video {
             width: 100%;
             height: 100%;
@@ -644,7 +639,7 @@
         }
 
         /* =========================================
-           9️⃣ Music Toggle Button
+           9️⃣ Music Button (With Pulse Animation)
            ========================================= */
         .music-btn {
             position: fixed;
@@ -664,6 +659,7 @@
             cursor: pointer;
             transition: all 0.3s ease;
             backdrop-filter: blur(5px);
+            display: none; /* Hidden initially, shown if needed or active */
         }
 
         .music-btn:hover {
@@ -673,18 +669,29 @@
         }
 
         .music-btn.active {
+            display: flex;
             color: var(--neon-primary);
             border-color: var(--neon-primary);
             box-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
         }
 
+        /* Pulsing animation if autoplay is blocked */
+        .music-btn.pulsing {
+            display: flex;
+            color: #ff4444;
+            border-color: #ff4444;
+            animation: pulse-red 1.5s infinite;
+        }
+
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(255, 68, 68, 0.7); transform: scale(1); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 68, 68, 0); transform: scale(1.1); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 68, 68, 0); transform: scale(1); }
+        }
+
         @media (max-width: 768px) {
             .hero { flex-direction: column-reverse; text-align: center; padding-top: 100px; }
-            .hero-text p { 
-                text-align: center; /* Center on mobile for better look */
-                margin-left: auto; 
-                margin-right: auto;
-            }
+            .hero-text p { text-align: center; margin-left: auto; margin-right: auto; }
             .hero-title { font-size: 2.2rem; }
             .hero-signature { font-size: 2.2rem; }
             .hero-visual { width: 100%; height: 500px; }
@@ -699,7 +706,7 @@
 </head>
 <body>
 
-    <!-- Background Music (1.mp3) -->
+    <!-- Background Music (Autoplay Attempt) -->
     <audio id="bg-audio" loop>
         <source src="1.mp3" type="audio/mpeg">
     </audio>
@@ -738,7 +745,6 @@
                     </div>
                 </div>
                 
-                <!-- Fixed Paragraph -->
                 <p>
                     Merging the precision of dentistry with the artistry of digital design. A portal to a world where science meets innovation.
                 </p>
@@ -885,37 +891,69 @@
         window.addEventListener('resize', initCanvas); initCanvas(); animateStars();
 
         /* =========================================
-           3️⃣ Background Music Logic (1.mp3)
+           3️⃣ Background Music (Auto-Play Logic)
            ========================================= */
         const audio = document.getElementById('bg-audio');
         const musicBtn = document.getElementById('music-toggle');
         let isPlaying = false;
 
-        // Attempt autoplay on load
+        // Attempt to autoplay immediately
         window.addEventListener('load', () => {
-            audio.play().then(() => {
+            // Try to play
+            const playPromise = audio.play();
+
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    // Autoplay started successfully!
+                    isPlaying = true;
+                    musicBtn.classList.add('active');
+                    musicBtn.style.display = 'flex'; // Show button as "Playing"
+                }).catch(error => {
+                    // Autoplay was prevented by browser (Chrome Policy)
+                    console.log("Autoplay prevented. Waiting for user interaction.");
+                    isPlaying = false;
+                    musicBtn.classList.add('pulsing'); // Make button pulse red
+                    musicBtn.style.display = 'flex'; // Show button to alert user
+                });
+            } else {
+                // Fallback for older browsers
+                audio.play();
                 isPlaying = true;
-                musicBtn.classList.add('active');
-            }).catch(error => {
-                // Autoplay prevented by browser (common issue)
-                console.log("Autoplay prevented by browser policy.");
-                isPlaying = false;
-                musicBtn.classList.remove('active');
-            });
+            }
         });
 
+        // Click handler for manual control (if autoplay fails)
         musicBtn.addEventListener('click', () => {
             if (isPlaying) {
                 audio.pause();
                 musicBtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
                 musicBtn.classList.remove('active');
+                musicBtn.classList.remove('pulsing');
             } else {
                 audio.play();
                 musicBtn.innerHTML = '<i class="fa-solid fa-music"></i>';
                 musicBtn.classList.add('active');
+                musicBtn.classList.remove('pulsing');
             }
             isPlaying = !isPlaying;
         });
+
+        // Also try to play on ANY click on the page (Common trick to unlock audio)
+        document.body.addEventListener('click', function unlockAudio() {
+            if (!isPlaying) {
+                audio.play().then(() => {
+                    isPlaying = true;
+                    musicBtn.classList.add('active');
+                    musicBtn.classList.remove('pulsing');
+                    musicBtn.style.display = 'flex';
+                }).catch(() => {
+                    // Still failing
+                });
+            }
+            // Remove listener after first click to avoid issues
+            document.body.removeEventListener('click', unlockAudio);
+        }, { once: true });
+
 
         /* =========================================
            4️⃣ Notifications Logic
@@ -933,7 +971,7 @@
             }, 5000);
         }
 
-        setTimeout(() => { showToast("ارحب ", "fa-solid fa-hand-sparkles"); }, 2000);
+        setTimeout(() => { showToast("منور", "fa-solid fa-hand-sparkles"); }, 2000);
         setTimeout(() => { showToast("صلي على النبي ﷺ", "fa-solid fa-moon"); }, 15000);
 
         /* =========================================
